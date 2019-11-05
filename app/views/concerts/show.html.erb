@@ -1,0 +1,18 @@
+<div class="main">
+
+<p id="notice"><%= notice %></p>
+
+<div class="contents">
+<h2><%= "#{@concert_title[0]}" %></h2>
+
+  <% @concert.each do |concert| %>
+    <%= render 'show-concert', songs: concert.songs.order(date: :asc , number: :asc), concert: concert %>
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_concert_path(concert) %>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to 'Back', concerts_path %>
+
+
+</div>

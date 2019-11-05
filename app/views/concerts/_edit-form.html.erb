@@ -1,0 +1,117 @@
+<%= form_with(model: concert, local: true) do |form| %>
+  <% if concert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(concert.errors.count, "error") %> prohibited this concert from being saved:</h2>
+
+      <ul>
+      <% concert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+  
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[0]) %>
+  <div class="field">
+    <strong>date1</strong>
+    <%= date_field_tag 'date1', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist1[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+  
+
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[1]) %>
+  <div class="field">
+    <strong>date2</strong>
+    <%= date_field_tag 'date2', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist2[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+  
+
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[2]) %>
+  <div class="field">
+    <strong>date3</strong>
+    <%= date_field_tag 'date3', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist3[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+
+  
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[3]) %>
+  <div class="field">
+    <strong>date4</strong>
+    <%= date_field_tag 'date4', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist4[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+
+  
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[4]) %>
+  <div class="field">
+    <strong>date5</strong>
+    <%= date_field_tag 'date5', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist5[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+
+  
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[5]) %>
+  <div class="field">
+    <strong>date6</strong>
+    <%= date_field_tag 'date6', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist6[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+
+  
+  <% day_setlists =  concert.setlists.where(date: @concert_dates[6]) %>
+  <div class="field">
+    <strong>date7</strong>
+    <%= date_field_tag 'date7', day_setlists[0].nil? ? "" : day_setlists[0].date, class: "form-control"%>
+  </div>
+  <strong>Setlist</strong>
+  <% (1..30).each do |n| %>
+    <div class="field">
+      <%= text_field_tag 'setlist7[]', day_setlists[n-1].nil? ? "" : day_setlists[n-1].song_id, class: "form-control", placeholder: "No.#{n}" %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% end %>

@@ -1,0 +1,23 @@
+<% dates = Setlist.where(concert_id: concert.id).pluck(:date).uniq %>
+<!-- concert.songs.order(date: :asc).(:date).uniq -->
+
+<div class="container">
+<div class="row">
+<% dates.each do |date| %>
+<div class="col-6">
+  <h5>
+    <%= date %>
+    <%= concert.place %>
+  </h5>
+  <br>
+  <h6>Setlist</h6>
+  <% concert.setlists.where(date: date).order(number: :asc).each do |song| %>
+    <h5>
+      <%= "#{song.number}." %>
+      <%= Song.find(song.song_id).title %>
+    </h5>
+  <% end %>
+</div>
+<% end %>
+</div>
+</div>

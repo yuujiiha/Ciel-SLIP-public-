@@ -1,0 +1,48 @@
+<%= render "home/music-menu" %>
+
+<div class="main">
+<h1>L'Arc~en~Ciel 楽曲一覧</h1>
+<p>※リリース日順</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>|Release</th>
+      <th>|Words</th>
+      <th>|Music</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td class="song-data"><%= song.id %></td>
+        <td class="song-data"><%= song.title %></td>
+        <td class="song-data"><%= song.release %></td>
+        <td class="song-data"><%= song.lyricist %></td>
+        <td class="song-data"><%= song.composer %></td>
+        <% if user_signed_in? %>
+          <td class="song-data"><%= link_to 'Show', song %></td>
+          <td class="song-data"><%= link_to 'Edit', edit_song_path(song) %></td>
+          <td class="song-data"><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%
+=begin
+%>
+<%= paginate @songs %>
+<%
+=end
+%>
+
+<%= link_to 'New Song', new_song_path %>
+
+</div>

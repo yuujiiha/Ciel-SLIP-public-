@@ -1,0 +1,50 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*body {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+.top-wrapper {
+    position: relative;
+    height: 900px;
+    width: 100%;
+    background-image: url("/rainbow.jpg");
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+}
+
+.top-title {
+    font-weight: bold;
+}
+
+#about {
+    padding: 15px;
+}
+
+.topmenu {
+    margin: 0 auto;
+    height: 50%;
+    width: 1000px;
+}
+
+.btn {
+    display: inline-block;
+    width: 95%;
+    padding: 20px 0;
+}
+
+.main {
+    margin: 0 auto;
+}

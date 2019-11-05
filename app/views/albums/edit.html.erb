@@ -1,0 +1,12 @@
+<h1>Editing Album</h1>
+
+<%= render 'form', album: @album %>
+
+<%= link_to 'Show', @album %> |
+<%= link_to 'Back', 
+  if @album.single == false
+    "/music/albums"
+  else
+    "/music/singles"
+  end
+%>

@@ -1,0 +1,34 @@
+<%= render "home/concert-menu" %>
+
+<div class="main">
+  
+<h1>ライブデータ</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concert_index.each do |concert| %>
+      <tr>
+        <td><%= link_to concert , "/concerts/#{concert}/detail" %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Show', "/concerts/#{concert}/detail" %></td>
+          <td><%= link_to 'Destroy', "/concerts/#{concert}/destroy" %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to 'New Concert', new_concert_path %>
+<% end %>
+
+</div>

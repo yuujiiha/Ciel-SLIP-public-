@@ -1,0 +1,37 @@
+<%= render "home/music-menu" %>
+
+<div class="main">
+
+<h3 id="album-title">
+  <strong>Title:</strong>
+  <%= @album.title %>
+</h3>
+
+<h4 id="release-date">
+  <strong>Release:</strong>
+  <%= @album.release %>
+</h4>
+
+<h4 id="songs-header" style="font-size: 25px;">収録曲</h4>
+
+<!-- Song No. -->
+<% @order = 1 %>
+<% @album.songs.order(number: :asc).each do |song| %>
+  <%= render 'show-album', song: song %>
+<% end %>
+
+
+<% if user_signed_in? %>
+
+<p>
+  <strong>Single:</strong>
+  <%= @album.single %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<% end %>
+<%= link_to 'Back', @album.single == false ? "/music/albums" : "/music/singles" %>
+
+ 
+
+</div>

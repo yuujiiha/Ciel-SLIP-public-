@@ -1,0 +1,185 @@
+<%= form_with(model: album, local: true) do |form| %>
+  <% if album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release %>
+    <%= form.date_select( :release , start_year: 1991 , end_year: 2041) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :single %>
+    <%= form.check_box :single %>
+  </div>
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[0].nil? ? '': @recorded_songs[0].id, class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[1].nil? ? '': @recorded_songs[1].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[2].nil? ? '': @recorded_songs[2].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[3].nil? ? '': @recorded_songs[3].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[4].nil? ? '': @recorded_songs[4].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[5].nil? ? '': @recorded_songs[5].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[6].nil? ? '': @recorded_songs[6].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[7].nil? ? '': @recorded_songs[7].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[8].nil? ? '': @recorded_songs[8].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[9].nil? ? '': @recorded_songs[9].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[10].nil? ? '': @recorded_songs[10].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[11].nil? ? '': @recorded_songs[11].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[12].nil? ? '': @recorded_songs[12].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[13].nil? ? '': @recorded_songs[13].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[14].nil? ? '': @recorded_songs[14].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[15].nil? ? '': @recorded_songs[15].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[16].nil? ? '': @recorded_songs[16].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[17].nil? ? '': @recorded_songs[17].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[18].nil? ? '': @recorded_songs[18].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[19].nil? ? '': @recorded_songs[19].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[20].nil? ? '': @recorded_songs[20].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[21].nil? ? '': @recorded_songs[21].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[22].nil? ? '': @recorded_songs[22].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[23].nil? ? '': @recorded_songs[23].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[24].nil? ? '': @recorded_songs[24].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[25].nil? ? '': @recorded_songs[25].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[26].nil? ? '': @recorded_songs[26].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[27].nil? ? '': @recorded_songs[27].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[28].nil? ? '': @recorded_songs[28].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[29].nil? ? '': @recorded_songs[29].id, class: "form-control" %>
+  </div>
+  
+
+  <div class="field">
+    <%= text_field_tag 'recorded_songs[]', @recorded_songs[30].nil? ? '': @recorded_songs[30].id, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

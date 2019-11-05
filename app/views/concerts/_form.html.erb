@@ -1,0 +1,293 @@
+<%= form_with(model: concert, local: true) do |form| %>
+  <% if concert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(concert.errors.count, "error") %> prohibited this concert from being saved:</h2>
+
+      <ul>
+      <% concert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+  
+  <div class="field">
+    <strong>date1</strong>
+    <input type="date" name="date1">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist1[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist1[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date2</strong>
+    <input type="date" name="date2">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist2[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist2[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date3</strong>
+    <input type="date" name="date3">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist3[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist3[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date4</strong>
+    <input type="date" name="date4">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist4[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist4[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date5</strong>
+    <input type="date" name="date5">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist5[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist5[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date6</strong>
+    <input type="date" name="date6">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist6[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist6[]', "No.30", class: "form-control" %>
+  </div>
+  
+  <div class="field">
+    <strong>date7</strong>
+    <input type="date" name="date7">
+  </div>
+  
+  <div class="field">
+    <%= text_field_tag 'setlist7[]', "No.1", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.2", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.3", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.4", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.5", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.6", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.7", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.8", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.9", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.10", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.11", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.12", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.13", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.14", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.15", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.16", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.17", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.18", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.19", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.20", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.21", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.22", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.23", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.24", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.25", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.26", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.27", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.28", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.29", class: "form-control" %>
+    <%= text_field_tag 'setlist7[]', "No.30", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
