@@ -75,3 +75,4 @@ gem 'devise', '~> 4.2'
 # kaminari
 gem 'kaminari', '~> 0.17.0'
 
+gem 'seed_dump'
