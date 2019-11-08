@@ -2,6 +2,7 @@ class ConcertsController < ApplicationController
   PER = 12
   before_action :set_concert, only: [:edit, :update]
   before_action :set_concert_title, only: [:show, :destroy]
+  before_action :user_signed_in? , only: [:new, :create, :edit, :update, :destroy]
 
 
   # GET /concerts

@@ -18,15 +18,20 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
-        <td class="song-data"><%= song.id %></td>
-        <td class="song-data"><%= song.title %></td>
-        <td class="song-data"><%= song.release %></td>
-        <td class="song-data"><%= song.lyricist %></td>
-        <td class="song-data"><%= song.composer %></td>
         <% if user_signed_in? %>
+          <td class="song-data"><%= song.id %></td>
+          <td class="song-data"><%= song.title %></td>
+          <td class="song-data"><%= song.release %></td>
+          <td class="song-data"><%= song.lyricist %></td>
+          <td class="song-data"><%= song.composer %></td>
           <td class="song-data"><%= link_to 'Show', song %></td>
           <td class="song-data"><%= link_to 'Edit', edit_song_path(song) %></td>
           <td class="song-data"><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+          <td class="song-data"><%= song.title %></td>
+          <td class="song-data"><%= song.release %></td>
+          <td class="song-data"><%= song.lyricist %></td>
+          <td class="song-data"><%= song.composer %></td>
         <% end %>
       </tr>
     <% end %>
@@ -35,14 +40,12 @@
 
 <br>
 
-<%
-=begin
-%>
-<%= paginate @songs %>
-<%
-=end
-%>
+<% if user_signed_in? %>
+  <%= link_to 'New Song', new_song_path %>
+<% else %>
+  <%= paginate @songs %>
+<% end %>
 
-<%= link_to 'New Song', new_song_path %>
+
 
 </div>

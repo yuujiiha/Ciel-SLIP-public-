@@ -1,6 +1,7 @@
 class AlbumsController < ApplicationController
   PER = 12
   before_action :set_album, only: [:show, :edit, :update, :destroy]
+  before_action :user_signed_in? , only: [:new, :create, :edit, :update, :destroy]
 
   # GET /albums
   # GET /albums.json

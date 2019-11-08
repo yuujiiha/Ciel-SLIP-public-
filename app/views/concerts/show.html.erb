@@ -3,7 +3,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="contents">
-<h2><%= "#{@concert_title[0]}" %></h2>
+  <div cLass="title">
+    <h2><%= "#{@concert_title[0]}" %></h2>
+  </div>
 
   <% @concert.each do |concert| %>
     <%= render 'show-concert', songs: concert.songs.order(date: :asc , number: :asc), concert: concert %>

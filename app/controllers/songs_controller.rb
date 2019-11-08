@@ -1,12 +1,12 @@
 class SongsController < ApplicationController
   PER = 15
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_action :user_signed_in? , only: [:new, :create, :edit, :update, :destroy]
 
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
-    #@songs = Song.all.page(params[:page]).per(PER)
+  @songs = Song.all.page(params[:page]).per(PER)
   end
 
   # GET /songs/1

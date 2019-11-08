@@ -2,8 +2,6 @@
 
 <div class="main">
   
-<h1>ライブデータ</h1>
-
 <table>
   <thead>
     <tr>
@@ -15,7 +13,7 @@
   <tbody>
     <% @concert_index.each do |concert| %>
       <tr>
-        <td><%= link_to concert , "/concerts/#{concert}/detail" %></td>
+        <td class="concert-link"><%= link_to concert , "/concerts/#{concert}/detail" %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Show', "/concerts/#{concert}/detail" %></td>
           <td><%= link_to 'Destroy', "/concerts/#{concert}/destroy" %></td>

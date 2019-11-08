@@ -15,7 +15,7 @@
     background-size: cover;
 }
 
-.container {
+.main-menu {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,14 +29,14 @@
     font-weight: bold;
 }
 
-#about {
-    padding: 15px;
-}
-
 .topmenu {
     margin: 0 auto;
     height: 50%;
     width: 1000px;
+}
+
+.no-gutters {
+    margin-top: 60px;
 }
 
 .btn {
@@ -47,4 +47,16 @@
 
 .main {
     margin: 0 auto;
+}
+
+.about {
+    margin: 50px auto;
+}
+.about p {
+    font-size: 10px;
+    
+}
+
+.concert-menu {
+    text-align: center;
 }
