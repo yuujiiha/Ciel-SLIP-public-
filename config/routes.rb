@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   
   get "/concerts/:title/detail", to: "concerts#show"
   get "/concerts/:title/destroy", to: "concerts#destroy"
+  
+  get "/links", to: "home#links"
 end

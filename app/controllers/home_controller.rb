@@ -12,4 +12,6 @@ class HomeController < ApplicationController
     def live
     end
     
+    def links
+    end
 end
