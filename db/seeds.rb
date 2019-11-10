@@ -3,7 +3,7 @@ User.create!([
   {email: "ishikawa@example.com", encrypted_password: "$2a$11$W6ULqUAj4dWQYsvzbJn/z.7EJlo2PhbubbyBpDLjVR488xmCHncBK", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
 ])
 Song.create!([
-  {id: 2, title: " Floods of tears(single version)", release: "1992-11-25", lyricist: "hyde", composer: "tetsu"},
+  {id: 2, title: "Floods of tears(single version)", release: "1992-11-25", lyricist: "hyde", composer: "tetsu"},
   {id: 3, title: "夜想花", release: "1992-11-25", lyricist: "hyde", composer: "ken"},
   {id: 5, title: "Shutting from the sky", release: "1993-04-10", lyricist: "hyde", composer: "L'Arc〜en〜Ciel"},
   {id: 6, title: "Voice", release: "1993-04-10", lyricist: "hyde", composer: "ken"},
@@ -678,14 +678,14 @@ AlbumSong.create!([
   {song_id: 252, album_id: 79, number: 5}
 ])
 Concert.create!([
-  {title: "LIVE 2018 L'ArChristmas", place: "東京ドーム"},
-  {title: "25th L'Anniversary LIVE", place: "東京ドーム"},
-  {title: "ARENA TOUR MMXX", place: "大阪城ホール"},
-  {title: "ARENA TOUR MMXX", place: "Aichi Sky Expo(愛知県国際展示場)"},
-  {title: "ARENA TOUR MMXX", place: "さいたまスーパーアリーナ"},
-  {title: "ARENA TOUR MMXX", place: "横浜アリーナ"},
-  {title: "ARENA TOUR MMXX", place: "国立代々木競技場第一体育館"},
-  {title: "LIVE 2015 L'ArCASINO", place: "夢洲野外特設会場"}
+  {id: 7, title: "LIVE 2018 L'ArChristmas", place: "東京ドーム"},
+  {id: 11, title: "25th L'Anniversary LIVE", place: "東京ドーム"},
+  {id: 13, title: "ARENA TOUR MMXX", place: "大阪城ホール"},
+  {id: 14, title: "ARENA TOUR MMXX", place: "Aichi Sky Expo(愛知県国際展示場)"},
+  {id: 15, title: "ARENA TOUR MMXX", place: "さいたまスーパーアリーナ"},
+  {id: 16, title: "ARENA TOUR MMXX", place: "横浜アリーナ"},
+  {id: 17, title: "ARENA TOUR MMXX", place: "国立代々木競技場第一体育館"},
+  {id: 18, title: "LIVE 2015 L'ArCASINO", place: "夢洲野外特設会場"}
 ])
 Setlist.create!([
   {concert_id: 7, song_id: 64, date: "2018-12-19", number: 1},
