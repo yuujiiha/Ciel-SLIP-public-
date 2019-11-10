@@ -1,6 +1,6 @@
 User.create!([
   {email: "breakin.boy@icloud.com", password: '1234567890', encrypted_password: "$2a$11$MYYH.90SV6LAOXyhJhwVEeN2t9jJhcitmfqQy8mSDNXbXd6HHp2FK", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil},
-  {email: "ishikawa@example.com", password: '1234567890' encrypted_password: "$2a$11$W6ULqUAj4dWQYsvzbJn/z.7EJlo2PhbubbyBpDLjVR488xmCHncBK", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
+  {email: "ishikawa@example.com", password: '1234567890', encrypted_password: "$2a$11$W6ULqUAj4dWQYsvzbJn/z.7EJlo2PhbubbyBpDLjVR488xmCHncBK", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
 ])
 Song.create!([
   {id: 2, title: "Floods of tears(single version)", release: "1992-11-25", lyricist: "hyde", composer: "tetsu"},
