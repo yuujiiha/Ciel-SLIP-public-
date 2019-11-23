@@ -86,3 +86,13 @@
 #music-top {
     height: 100%;
 }
+
+@media(max-width:1000px) {
+    .main-menu {
+        width: 100%;
+    }
+    
+    .top-title {
+        font-size: 25px;
+    }
+}
