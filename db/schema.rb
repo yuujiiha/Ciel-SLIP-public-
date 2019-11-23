@@ -37,13 +37,6 @@ ActiveRecord::Schema.define(version: 2019_10_22_112147) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lives", force: :cascade do |t|
-    t.string "title"
-    t.date "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "setlists", force: :cascade do |t|
     t.integer "concert_id"
     t.integer "song_id"
