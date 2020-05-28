@@ -73,7 +73,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.2'
 
 # kaminari
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 
 gem 'seed_dump'
 
